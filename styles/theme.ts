@@ -6,4 +6,5 @@ export const theme = {
   GRAY2: "#D1D1D1",
   GRAY3: "#E7E7E7",
   GRAY4: "#F6F6F6",
+  GRAY5: "#8C8E99",
 };

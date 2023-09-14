@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import { theme } from "@/styles/theme";
 import styled from "@emotion/styled";
 import React, { use, useEffect, useState } from "react";
+import Navigation from "./common/navigation";
 
 interface props {
   children: React.ReactNode;
@@ -24,7 +25,12 @@ const Layout: NextPage<props> = ({ children }) => {
   }, []);
 
   return pageSize ? (
-    <main>{children}</main>
+    <>
+      <WebView>
+        <main>{children}</main>
+        <Navigation />
+      </WebView>
+    </>
   ) : (
     <>
       <Container>
@@ -53,7 +59,8 @@ const Layout: NextPage<props> = ({ children }) => {
         </ItemBox>
 
         <WebView>
-          <main>{children}</main>
+          <main id="main">{children}</main>
+          <Navigation />
         </WebView>
       </Container>
     </>
@@ -78,7 +85,7 @@ const WebView = styled.div`
   aspect-ratio: 1/2;
   height: 100%;
   max-height: 900px;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 90px 20px;
   overflow-y: scroll;
   background-color: ${theme.WHITE};
 `;

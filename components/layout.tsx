@@ -75,10 +75,10 @@ const Container = styled.div`
 
 const WebView = styled.div`
   position: relative;
-  aspect-ratio: 1/1.8;
+  aspect-ratio: 1/2;
   height: 100%;
   max-height: 900px;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
   overflow-y: scroll;
   background-color: ${theme.WHITE};
 `;
